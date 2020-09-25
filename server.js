@@ -58,6 +58,9 @@ mongoose.connect(connection_url, {
 // api routes
 
 // Getting
+app.get("/", (req, res) => {
+  res.send("App is successfully running");
+});
 app.get("/messages/:pid", async (req, res) => {
   const userId = req.params.pid;
   let send = [];
